@@ -1,0 +1,27 @@
+{
+  "name": "@isabelonicolas/acme",
+  "version": "1.0.0",
+  "description": "A dummy package for testing and experimentation.",
+  "author": "Isabelo Nicolas II",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "changeset": "changeset",
+    "clean": "rm -rf dist node_modules",
+    "publish": "changeset publish",
+    "version": "npm run build && changeset version"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8",
+    "typescript": "^5"
+  }
+}
